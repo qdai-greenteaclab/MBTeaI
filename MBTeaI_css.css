@@ -88,7 +88,7 @@ aside {/* サイドバー */
 }
 .botton {
     background: #0d6828;
-    margin:0 33.5vw 0 33.5vw;
+    margin: 0 0 0 33.5vw;
     width: 33vw;
     height: 120px;
     border-radius: 10px;
@@ -158,38 +158,77 @@ footer{
 #btn_q2:hover{
     transform: scale(1.1);
 }
+progress{
+    margin-left: 25vw;
+    margin-bottom: 30px;
+    background-color: #6cd10d;
+    width: 50vw;
+    height: 30px;
+}
 /*結果画面*/
 .kekka{
-    margin:0 40vw 0 40vw;
+    text-align: center;
+    margin:0 0 0 40vw;
     width: 20vw;
     height: 50px;
 }
-#otyaya_gazou{
+/*#otyaya_gazou{
     margin:0 40vw 0 40vw;
     width: 20vw;
     height: 200px;
-}
+}*/
 .kekka_bun{
-    margin:0 40vw 0 40vw;
-    width: 20vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 300px;
     height: 30px;
+    font-size: 22px;
 }
 #kekka_hyouzi{
+    text-align: center;
     margin:0 40vw 0 40vw;
     width: 20vw;
     height: 160px;
     font-size: 120px;
 }
 #kekka_setumei{
-    margin:0 40vw 0 40vw;
-    width: 20vw;
-    height: 50px;
+    background-color: rgba(255,255,255,0.6);
+    margin: 0 auto;
+    width: 770px;
+    height: 300px;
+}
+#kekka_description_first{
+    text-align: center;
+    font-size: 30px;
+}
+#kekka_description_second{
+    font-size: 20px;
+}
+#kekka_description_const{
+    font-size: 20px;
+}
+#kekka_description_third{
+    font-size: 20px;
+}
+#kekka_name{
+    white-space: pre-line;
+    font-size: 25px;
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 200px;
+    height: 80px;
+    background-color: rgba(255,255,255,0.6);
+    justify-content: center;
 }
 /*説明画面*/
 @media (max-width: 600px){/*スマホ用*/
 .botton{
     background: #0d6828;
-    margin:0 20vw 0 20vw;
+    margin:0 0 0 20vw;
     width: 60vw;
     height: 80px;
     border-radius: 10px;
@@ -202,8 +241,8 @@ footer{
     justify-content: center;  /* 横中央 */
     align-items: center;      /* 縦中央 */
     margin: auto;
-    width: 400px;
-    height: 250px;
+    width: 320px;
+    height: 200px;
 }
 aside {/* サイドバー */
   position: relative;
@@ -216,24 +255,24 @@ aside {/* サイドバー */
     display: flex;
 }
 #x{
-    margin:0 18px 0 18px;
-    width: 60px;
-    height: 60px;
+    margin:0 6vw 0 0;
+    width: 15vw;
+    height: 15vw;
 }
 #instagram{
-    margin:0 18px 0 18px;
-    width: 60px;
-    height: 60px;
+    margin:0 6vw 0 0;
+    width: 15vw;
+    height: 15vw;
 }
 #radio{
-    margin:0 18px 0 18px;
-    width: 60px;
-    height: 60px;
-}
+    margin:0 6vw 0 0;
+    width: 15vw;
+    height: 15vw;
+}    
 #note{
-    margin:0 18px 0 18px;
-    width: 60px;
-    height: 60px;
+    margin:0 6vw 0 0;
+    width: 15vw;
+    height: 15vw;
 }
 /*診断画面*/
 .text{
@@ -273,6 +312,13 @@ aside {/* サイドバー */
     color: #ffffff;
     font-weight: bold;
 }
+progress{
+    margin-left: 20vw;
+    margin-bottom: 30px;
+    background-color: #6cd10d;
+    width: 60vw;
+    height: 30px;
+}
 /*結果画面*/
 .kekka{
     margin:0 10vw 0 10vw;
@@ -286,12 +332,6 @@ aside {/* サイドバー */
     height: 200px;
     margin-bottom: 40px;
 }
-.kekka_bun{
-    margin:0 10vw 0 10vw;
-    width: 80vw;
-    height: 30px;
-    text-align: center;
-}
 #kekka_hyouzi{
     margin:0 20vw 0 20vw;
     width: 60vw;
@@ -300,9 +340,10 @@ aside {/* サイドバー */
     text-align: center;
 }
 #kekka_setumei{
-    margin:0 20vw 0 20vw;
-    width: 60vw;
-    height: 50px;
+    background-color: rgba(255,255,255,0.6);
+    margin: 0 auto;
+    width: 80vw;
+    height: 600px;
 }
 /*説明画面*/
 }
