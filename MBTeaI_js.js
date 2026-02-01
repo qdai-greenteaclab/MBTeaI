@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     c+=1
     document.querySelector("#btn_fi").disabled = true;
     document.getElementById('btn_fi').style.display = 'none'
+    document.querySelector("#btn_before").disabled = true;
+    document.getElementById('btn_before').style.display = 'none';
     //〇ボタンコード
     const tyousa_maru = () => {
         haiten[0]+=Number(mondaibun[c-1][3])
@@ -48,6 +50,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('#btn_q2').textContent = mondaibun[c][2];
         var progress = document.getElementById("myProgress");
         progress.value += 10;
+        document.querySelector("#btn_before").disabled = false;
+        document.getElementById('btn_before').style.display = 'inline';
         c+=1
         if (c == mondaisuu + 1){
         document.querySelector("#btn_fi").disabled = false;
@@ -75,6 +79,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('#btn_q2').textContent = mondaibun[c][2];
         var progress = document.getElementById("myProgress");
         progress.value += 10;
+        document.querySelector("#btn_before").disabled = false;
+        document.getElementById('btn_before').style.display = 'inline';
         c+=1
         if (c == mondaisuu + 1){
         document.querySelector("#btn_fi").disabled = false;
@@ -98,6 +104,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     btn_q1.addEventListener('click',tyousa_maru)
     btn_q2.addEventListener('click',tyousa_batu)
+//前に戻るボタンのコード
+    const tyousa_before = () => {
+        if (c == mondaisuu + 1){
+        document.querySelector("#btn_fi").disabled = true;
+        document.getElementById('btn_fi').style.display = 'none';
+        document.querySelector("#btn_q1").disabled = false;
+        document.querySelector("#btn_q2").disabled = false;
+        document.getElementById('btn_q1').style.display = 'inline'
+        document.getElementById('btn_q2').style.display = 'inline'
+        }
+        c-=1
+        haiten[0]-=Number(mondaibun[c-1][3])
+        haiten[1]-=Number(mondaibun[c-1][4])
+        haiten[2]-=Number(mondaibun[c-1][5])
+        haiten[3]-=Number(mondaibun[c-1][6])
+        document.querySelector('#question').textContent = mondaibun[c-1][0];
+        document.querySelector('#btn_q1').textContent = mondaibun[c-1][1];
+        document.querySelector('#btn_q2').textContent = mondaibun[c-1][2];
+        var progress = document.getElementById("myProgress");
+        progress.value -= 10;
+        if (c == 1){
+            document.querySelector("#btn_before").disabled = true;
+            document.getElementById('btn_before').style.display = 'none';
+        }
+    }
+    btn_before.addEventListener('click',tyousa_before)
 });
 //診断結果に遷移するコード
 document.addEventListener('DOMContentLoaded', (event) => {
