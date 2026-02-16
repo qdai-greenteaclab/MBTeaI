@@ -196,12 +196,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ]
     const otyayasan_name =[
         'nothing',
-        'ふりゅう',
         'nothing',
-        'TEAWAVE\n山科',
-        '岩木園\n山口園',
-        '蘊',
-        '栗原園\n光安青霞園',
+        'nothing',
+        'nothing',
+        'nothing',
+        'nothing',
+        'nothing',
         'nothing',
     ]
     //診断結果を表示するコード 
@@ -232,3 +232,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener('DOMContentLoaded', (event) => {
     
 });
+
